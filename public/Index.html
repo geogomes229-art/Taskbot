@@ -1,0 +1,61 @@
+<body>
+<main class="page">
+<div class="content">
+<div class="hero">
+<div class="wordmark">TaskBot<span class="bar"></span></div>
+<p class="sub">para Sala do Futuro &amp; CMSP</p>
+</div>
+<div class="card">
+<div class="fg">
+<label for="ra">RA</label>
+<div class="iw">
+<input type="text" id="ra" placeholder="RA + dígito + sp" autocomplete="username" spellcheck="false">
+</div>
+</div>
+<div class="fg">
+<label for="senha">Senha</label>
+<div class="iw">
+<input type="password" id="senha" placeholder="••••••••" autocomplete="current-password">
+<button class="ib" id="toggleSenha" type="button">
+<svg id="eyeO" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+<svg id="eyeC" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+</button>
+</div>
+</div>
+<div class="bg">
+<button class="btn bp" id="btnP" onclick="go(false)" type="button">
+<span class="sp" id="spP"></span>Atividades Pendentes
+</button>
+<button class="btn bs" id="btnE" onclick="go(true)" type="button">
+<span class="sp" id="spE"></span>Atividades Expiradas
+</button>
+</div>
+</div>
+<div class="log" id="logCard">
+<div class="lt">Status</div>
+<div class="le" id="logEl"></div>
+<div class="pw" id="pw"><div class="pb" id="pb"></div></div>
+</div>
+</div>
+</main>
+<div class="mb" id="modal">
+<div class="mo">
+<div class="mh">
+<h2 id="mTitle">Atividades</h2>
+<button class="mc" onclick="closeModal()" type="button">✕</button>
+</div>
+<div class="sar" onclick="toggleAll()">
+<input type="checkbox" id="selAll" onclick="event.stopPropagation();toggleAll()">
+<label>Selecionar todas</label>
+<span class="badge" id="cnt">0</span>
+</div>
+<div class="al" id="aList"></div>
+<div class="ma">
+<button class="btn bs" onclick="closeModal()" type="button">Cancelar</button>
+<button class="btn bp" id="btnEx" onclick="exec()" type="button">
+<span class="sp" id="spM"></span>Concluir Selecionadas
+</button>
+</div>
+</div>
+</div>
+<footer>feito com ❤️ por Geovanna</footer>
